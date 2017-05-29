@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteRule ^api/auth$ api/auth.php
+RewriteRule ^api/signup$ api/register.php
+
+#toi uu hoa duong dan path
+
+#Users
+RewriteRule ^api/users/([a-zA-Z-_0-9]+)$ api/users.php?user_id=$1
+RewriteRule ^api/users$ api/users.php
+
+#Task
+RewriteRule ^api/users/([a-zA-Z-_0-9]+)/task/([a-zA-Z-_0-9]+)$ api/task/task.php?user_id=$1&task_id=$2
